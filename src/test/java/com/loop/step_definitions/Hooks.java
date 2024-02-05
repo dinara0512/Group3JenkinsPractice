@@ -10,13 +10,15 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.util.concurrent.TimeUnit;
+
 public class Hooks {
 
         private static final Logger LOG = LogManager.getLogger();
 
         @Before
-        public void setUp(Scenario scenario){
-            Driver.getDriver();
+        public void setUp(Scenario scenario) throws Throwable{
+            Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);;
             BrowserUtilities.myScenario = scenario;
             LOG.info("..........START AUTOMATION.........LOOP ACADEMY");
 
