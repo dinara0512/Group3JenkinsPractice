@@ -19,8 +19,8 @@ Environment Setup
 Install Java JDK: Ensure Java JDK 11+ is installed and JAVA_HOME is configured.
 Install Maven: Download and install Apache Maven, setting up the M2_HOME path.
 Project Setup
-Clone the Project:
 
+Clone the Project:
 
 git clone https://github.com/dinara0512/Group3JenkinsPractice
 cd your-framework-repo
