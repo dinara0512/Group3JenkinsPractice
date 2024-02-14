@@ -1,47 +1,65 @@
-Selenium-JUnit-Cucumber Test Automation Framework
-This is a test automation framework implemented using Selenium, JUnit, and Cucumber in Java. It follows the Page Object Model design pattern and is managed with Maven.
+LOOPACADEMY Testing Framework
+Overview
+The LOOPACADEMY Testing Framework is an advanced, Java-based automation framework developed by the students of LOOPACADEMY. Designed for both UI and API testing, this framework integrates database interactions seamlessly, ensuring comprehensive validation of web applications' functionality, performance, and security. Built on Maven, it facilitates easy management of project dependencies and customizable build configurations.
+
+Key Features
+Modular Page Package: Implements the Page Object Model (POM) for encapsulating UI behavior and elements, promoting code reuse and maintainability.
+Test Runner: Utilizes JUnit's advanced runner capabilities for flexible execution strategies, tagging, and filtering.
+Step Definitions: Employs Cucumber for BDD approach, enhancing the documentation and readability of test cases.
+Utilities Module: Offers a suite of utilities for common tasks such as screenshot capture, logging, and data manipulation, designed for extensibility.
+Feature Files Repository: Organized BDD feature files for clear, human-readable test scenario outlines.
+Database Testing: Integrates JDBC and ORM solutions for robust database state validation and manipulation.
+RESTful API Testing: Incorporates RestAssured for fluent API test scripting, supporting a wide range of HTTP operations.
+Technical Prerequisites
+JDK 11 or above
+Maven 3.6.3 or later
+Any IDE that supports Java and Maven (e.g., IntelliJ IDEA, Eclipse)
+Setup Instructions
+Environment Setup
+Install Java JDK: Ensure Java JDK 11+ is installed and JAVA_HOME is configured.
+Install Maven: Download and install Apache Maven, setting up the M2_HOME path.
+Project Setup
+Clone the Project:
 
 
-**Prerequisites**
-Java 11 (or later)
+git clone https://github.com/dinara0512/Group3JenkinsPractice
+cd your-framework-repo
+Install Project Dependencies:
 
-**Maven**
-Browsers (e.g., Chrome, Firefox)
-Ensure that all the prerequisites are installed and properly configured.
 
-Framework Structure
-src/main/java/pages: This directory contains all the page objects.
-src/main/java/utilities: This directory contains utility classes.
-src/test/java/step_definitions: This directory contains step definition classes for the Cucumber scenarios.
-src/test/resources/features: This directory contains all the Cucumber feature files.
-pom.xml: The Project Object Model file for the Maven project. It includes all the dependencies needed for the project.
-Setup and Running Tests
-Clone this repository: git clone <repository-url>
+mvn clean install
+IDE Configuration: Import the project into your IDE as a Maven project. Ensure the IDE is configured to use the JDK version you've installed.
 
-Move into the project directory: cd <project-name>
+Advanced Usage
+Custom Configurations
+Database Configurations: Customize database connections in src/main/resources/database.properties. Supports multiple DB environments.
 
-To clean the project, run: mvn clean
-To compile the project, run: mvn compile
-To execute the tests, run: mvn test
-The tests will run, and the report will be generated in the target directory.
+API Testing Configurations: Adjust base URI, timeout settings, and authentication details in src/main/resources/api.properties.
 
-Reports
-Test report can be found in the following directory after running the tests: target/cucumber-reports/report.html
+Extending the Framework
+Adding New Utilities: Implement utility classes in the src/main/java/utilities directory. Use the Singleton pattern for utility classes where appropriate.
 
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Custom Page Factory: Enhance the Page Object handling by introducing dynamic element locators and custom waits in the Page Factory module.
 
-uthors
-[Your Name] - Initial work - YourGithubUsername
-See also the list of contributors who participated in this project.
+Integration with CI/CD
+Maven Integration: Utilize Maven profiles and properties to customize test executions for different environments.
+Jenkins Pipeline: Configure a Jenkinsfile to automate the execution of tests as part of your CI/CD pipeline, leveraging Maven goals.
+Contribution Guidelines
+We value contributions that improve the framework's quality, extend its capabilities, or fix existing issues. Consider the following process for contributions:
+
+Fork the Repository: Start by forking the project repository.
+Feature Branch: Create a new branch (git checkout -b feature/YourAmazingFeature) for your contribution.
+Commit Changes: Make and commit your changes with descriptive commit messages.
+Push Changes: Push your changes to GitHub (git push origin feature/YourAmazingFeature).
+Pull Request: Submit a pull request to the original repository for review.
+Please ensure your code adheres to the project's coding standards and passes all existing tests. New features should be accompanied by corresponding unit and integration tests.
 
 License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-Please replace placeholders (like <repository-url>, <project-name>, [Your Name], YourGithubUsername, https://github.com/your/project/contributors) with actual information.
+Contact & Support
+Lead Developer: Dina Rafikova
+Project Link: https://github.com/dinara0512/Group3JenkinsPractice
+For support, please open an issue through the GitHub repository, and we will assist you as soon as possible.
 
-This is a very basic README template. Depending on your project, you might need to add or remove sections. For instance, you might want to add sections for Code Style, Technologies used, Acknowledgments, etc.
-
-Remember, the goal of the README is to provide all the necessary information for anyone (new team member, open-source contributor, etc.) to understand what your project is about, how to set it up, and how to use it.
-README.md
-3 KB
+This version of the README is crafted for developers and testers seeking an in-depth understanding of the framework's capabilities, offering guidance for customization, integration, and contribution. Adjust and expand based on the specific features and configurations of your framework.
