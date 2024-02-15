@@ -27,7 +27,7 @@ public class LoginStepDefs {
 
         @When("user enters username for client")
         public void user_enters_username_for_client() {
-            loginPage.loginInput.sendKeys(DocuportConstants.USERNAME_CLIENT);
+            loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_CLIENT);
         }
 
         @When("user enters password for client")
@@ -55,7 +55,7 @@ public class LoginStepDefs {
         @When("user enters username for employee")
         public void user_enters_username_for_employee() {
             BrowserUtilities.waitForClickable(loginPage.loginButton, DocuportConstants.large);
-            loginPage.loginInput.sendKeys(DocuportConstants.USERNAME_EMPLOYEE);
+            loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_EMPLOYEE);
         }
 
         @When("user enters password for employee")
