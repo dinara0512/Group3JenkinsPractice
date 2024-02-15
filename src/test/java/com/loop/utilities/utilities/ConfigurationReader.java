@@ -1,12 +1,14 @@
 package com.loop.utilities.utilities;
-
 import java.io.FileInputStream;
 import java.util.Properties;
 
+public class ConfigurationReader {
+
+
+
     /**
-     * this class as designed to read properties file and send the data to source code
+     * this class os designed to read properties file and send the data to source code
      */
-    public class ConfigurationReader {
 
         private static Properties properties;
 
@@ -17,14 +19,12 @@ import java.util.Properties;
                 properties = new Properties();
                 properties.load(input);
                 input.close();
-            } catch (Exception e) {
+            } catch(Exception e){
                 e.printStackTrace();
             }
         }
 
-        public static String getProperty(String keyName) {
+        public static String getProperty(String keyName){
             return properties.getProperty(keyName);
         }
     }
-
-

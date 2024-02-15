@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
                     glue = "com/loop/step_definitions",
                     //It can be true or false.When dryRun=true, hook Class and any browser will not run
                     dryRun =false ,
-                    tags = "@supervisor",
+                    tags = "@rows",
                     //Make console output for the Cucumber test much more readable and remove any unreadable character
                     monochrome = true
                     //publish =false // online cucumber report but does not use it work due to privacy of data
