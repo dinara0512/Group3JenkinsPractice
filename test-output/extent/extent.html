@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 15, 2024 12:41:43 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 16, 2024 07:46:17 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -76,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -84,31 +79,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@rows</a>
+<a class="dropdown-item" href="#">@Email</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Checking Rows Per Page functionality</p>
+            <p class="name">Email</p>
             <p class="text-sm">
-              <span>12:41:43 PM</span> / <span>00:00:10:292</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>7:46:18 AM</span> / <span>00:00:05:876</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Checking Rows Per Page functionality</h5>
-<span class='badge badge-success'>02.15.2024 12:41:43 PM</span>
-<span class='badge badge-danger'>02.15.2024 12:41:54 PM</span>
-<span class='badge badge-default'>00:00:10:292</span>
+<h5 class="test-status text-pass">Email</h5>
+<span class='badge badge-success'>02.16.2024 7:46:18 AM</span>
+<span class='badge badge-danger'>02.16.2024 7:46:23 AM</span>
+<span class='badge badge-default'>00:00:05:876</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -121,91 +116,33 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Validate Rows Per Page for different user roles</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Send email</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_login_as(java.lang.String)">
-                <span>Given user login as "advisor"</span>
+              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorSendInvitation.login_as(java.lang.String)">
+                <span>Given login as "advisor"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_click_on_leads()">
-                <span>When user click on Leads</span>
+              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorSendInvitation.click_on_avatar()">
+                <span>Then click on Avatar</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_validate_that_rows_per_page_defaults_to_10()">
-                <span>Then user validate that Rows Per Page defaults to 10</span>
+              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorSendInvitation.click_send_invitation()">
+                <span>Then Click send invitation</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_change_rows_per_page_to(java.lang.Integer)">
-                <span>When user change Rows Per Page to 5</span>
+              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorSendInvitation.add_email(java.lang.String)">
+                <span>Then add email "BobM12@gmail.com"</span>
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_click_on_specific(java.lang.String)">
-                <span>When user click on "Users"</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome-headless-shell=121.0.6167.161)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [55ce0590054dfbda7201fd210500881c, clickElement {id=4F418C402C196A667567E30025CD31D3_element_40}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\ramiz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65430}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65430/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome-headless-shell on windows (55ce0590054dfbda7201fd210500881c)] -> xpath: //span[@class='body-1' and text()='Users']]
-Session ID: 55ce0590054dfbda7201fd210500881c
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy37.click(Unknown Source)
-	at com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_click_on_specific(AdvisorValidatingRows_step_defs.java:44)
-	at ✽.user click on "Users"(file:///C:/Users/ramiz/IdeaProjects/Group3JenkinsPractice/src/test/resources/features/AdvisortValidatingRows.feature:9)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_validate_that_rows_per_page_defaults_to(java.lang.Integer)">
-                <span>Then user validate that Rows per Page defaults to 10</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_change_rows_per_page_to(java.lang.Integer)">
-                <span>When user change Rows Per Page to 5</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="com.loop.step_definitions.AdvisorValidatingRows_step_defs.user_validate_that_it_shows_only(java.lang.Integer)">
-                <span>Then user validate that it shows only 5</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>com.loop.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>Validate Rows Per Page for different user roles
-          <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
-    
-    </div></div>
-</div>
+              <div class="step pass-bg" title="com.loop.step_definitions.AdvisorSendInvitation.click_send()">
+                <span>Then click send</span>
       <div>
       </div>
               </div>
@@ -224,59 +161,7 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.ElementNotInteractableException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.ElementNotInteractableException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:41:49 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='8'>When user click on "Users"</a>
-<div class="">
-<span class="badge badge-default">Checking Rows Per Page functionality.Validate Rows Per Page for different user roles.When user click on "Users"</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
@@ -287,15 +172,15 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@rows</p>
+<p class="name">@Email</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@rows</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>@Email</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -306,13 +191,13 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:41:43 PM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>07:46:18 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Validate Rows Per Page for different user roles</a>
+<a href="#" class="linked" test-id='1' id='2'>Send email</a>
 <div class="">
-<span class="badge badge-default">Checking Rows Per Page functionality.Validate Rows Per Page for different user roles</span>
+<span class="badge badge-default">Email.Send email</span>
 </div>
 </td>
 </tr>
@@ -333,25 +218,25 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 15, 2024 12:41:43 PM</h3>
+<h3>Feb 16, 2024 07:46:17 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 15, 2024 12:41:54 PM</h3>
+<h3>Feb 16, 2024 07:46:23 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -367,12 +252,12 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -390,9 +275,9 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='100%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -410,10 +295,10 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='55%'><b>5</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>5</b> steps passed</small></div>
 <div>
-<small data-tooltip='11%'><b>1</b> steps failed,
-<b>3</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -429,7 +314,7 @@ Session ID: 55ce0590054dfbda7201fd210500881c
 </div></div>
 <script>
 var timeline = {
-"Checking Rows Per Page functionality":10.292
+"Email":5.876
 };
 </script>
 <div class="row">
@@ -439,12 +324,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@rows</td>
-<td>0</td>
+<td>@Email</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -455,21 +340,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 0,
-failChild: 1,
+passChild: 1,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
 passGrandChild: 5,
-failGrandChild: 1,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 3,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
