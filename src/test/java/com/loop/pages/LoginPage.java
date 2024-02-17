@@ -16,6 +16,11 @@ public class LoginPage extends DocuportBasePage {
         usernameInput.sendKeys(ConfigurationReader.getProperty("advisor_username"));
         passwordInput.sendKeys(ConfigurationReader.getProperty("advisor_password"));
         loginButton.click();
+    } public void loginAsAdvisorG1() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        usernameInput.sendKeys(ConfigurationReader.getProperty("advisorg1_username"));
+        passwordInput.sendKeys(ConfigurationReader.getProperty("advisorg1_password"));
+        loginButton.click();
     }
     public void loginasSupervisor() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
