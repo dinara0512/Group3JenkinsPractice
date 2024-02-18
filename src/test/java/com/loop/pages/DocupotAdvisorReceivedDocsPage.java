@@ -58,7 +58,7 @@ public class DocupotAdvisorReceivedDocsPage extends DocuportClientsPage{
                 BrowserUtilities.waitForClickable(doneRadio,5).click();
                 break;
             case "savebtn":
-                BrowserUtilities.waitForVisibility(saveBtn,5);
+                BrowserUtilities.waitForVisibility(saveBtn,5).click();
                 break;
 
             default:
