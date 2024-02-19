@@ -41,3 +41,18 @@ Feature: Docport Login Logout Feature
       |password|Group1               |
     Then user should see the home page for client
 
+   @loginLogoutAsDifferentUsers
+  Scenario Outline: Login to Docuport System
+    When user enters their username for "<user_type>"
+    And user enters their password for "<user_type>"
+    And user clicks the login button for "<user_type>"
+    Then user should see the home page for "<user_type>"
+    And user should logout from Docuport System
+    Examples:
+      |user_type|
+      |client   |
+      |advisor  |
+      |supervisor|
+      |employee  |
+
+
