@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
                     //Path to step definiton classes
                     glue = "com/loop/step_definitions",
                     //It can be true or false.When dryRun=true, hook Class and any browser will not run
-                    dryRun =false , //for starting testing
+                    dryRun =false, //for starting testing
                     tags = "@smoke",
                     //Make console output for the Cucumber test much more readable and remove any unreadable character
                     monochrome = true
