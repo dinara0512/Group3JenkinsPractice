@@ -86,6 +86,14 @@ public class DocuportBasePage {
         @FindBy (xpath ="//span[text()='Batch1 Group3']")
         public WebElement logo;
 
+        @FindBy (xpath = "//span[.='Profile']")
+        public WebElement profile;
+
+        @FindBy (xpath = "//span[.='Log out']")
+        public WebElement logOutButton;
+         @FindBy (xpath = "//span[.='Client ']")
+         public WebElement user_type;
+
 
         @FindBy (xpath = "//div[@class='v-data-footer__pagination']")
         public WebElement totalResultCount; //1-10 of 869
