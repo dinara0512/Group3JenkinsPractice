@@ -26,7 +26,7 @@ public class CreatingNewClientPage {
     public WebElement firstNameInp;
     @FindBy(xpath = "//div[label[.='Last name']]//input")
     public WebElement lastNameInp;
-    @FindBy(xpath = "//div[@class='v-input--selection-controls__ripple']")
+    @FindBy(xpath = "//label[.='Create new user']")
     public WebElement checkBoxNewUser;
     @FindBy(xpath = "//div[label[.='Email address']]//input")
     public WebElement emailInp;
@@ -51,7 +51,7 @@ public class CreatingNewClientPage {
         firstNameInp.sendKeys(list.get(0) + Keys.ENTER);
         BrowserUtilities.waitForClickable(lastNameInp, 5);
         lastNameInp.sendKeys(list.get(1)+ Keys.ENTER);
-        checkBoxNewUser.click();
+        BrowserUtilities.waitForVisibility(checkBoxNewUser, 5).click();
         BrowserUtilities.waitForClickable(emailInp, 5);
         emailInp.sendKeys(list.get(2)+ Keys.ENTER);
         dropdownBtn.click();
@@ -62,7 +62,7 @@ public class CreatingNewClientPage {
         passwordInp.sendKeys(list.get(4)+ Keys.ENTER);
         BrowserUtilities.waitForClickable(confirmPasswordInp, 5);
         confirmPasswordInp.sendKeys(list.get(4)+ Keys.ENTER);
-        saveBtn.click();
+        BrowserUtilities.waitForVisibility(saveBtn, 5).click();
 
 
     }

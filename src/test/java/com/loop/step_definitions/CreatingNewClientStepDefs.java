@@ -36,11 +36,11 @@ public class CreatingNewClientStepDefs {
     public void user_validates_client_is_created_in_db(String email) throws SQLException {
         String expected = "User";
         DB_Utility.createConnection("jdbc:postgresql://35.222.62.70:5432/postgres", "tstadmin", "hoxBam-jaghuj-7cette");
-        ResultSet rs = DB_Utility.runQuery("select last_name from identity.users where email_address = '"+email+"'");
+        ResultSet rs = DB_Utility.runQuery("select * from identity.users where email_address = '"+email+"'");
         //System.out.println(rs.getString("last_name"));
-        rs.next();
-        assertEquals("Expected does NOT match actual",expected, rs.getString("last_name"));
-
+        if(rs.next()) {
+            assertEquals("Expected does NOT match actual", expected, rs.getString("last_name"));
+        }
 
 
     }

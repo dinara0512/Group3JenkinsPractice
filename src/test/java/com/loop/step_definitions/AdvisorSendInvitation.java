@@ -2,6 +2,7 @@ package com.loop.step_definitions;
 
 import com.loop.pages.LoginPage;
 import com.loop.pages.SendInvitation;
+import com.loop.utilities.utilities.BrowserUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -27,7 +28,7 @@ public class AdvisorSendInvitation {
     }
     @Then("click send")
     public void click_send() {
-        sendInvitation.send.click();
+        BrowserUtilities.clickWithJS(sendInvitation.send);
     }
 
 
