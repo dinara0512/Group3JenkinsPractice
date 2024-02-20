@@ -7,11 +7,11 @@ Feature: Create a new client in Docuport
     And user creates new client
       |Happy               |
       |User                |
-      |happyuser430@gmail.com|
+      |happyuser410@gmail.com|
       |2407775555          |
       |Group3              |
-    Then user validates client is created in DB "happyuser430@gmail.com"
-    Then user delete created client in DB "happyuser430@gmail.com"
+    Then user validates client is created in DB "happyuser410@gmail.com"
+    Then user delete created client in DB "happyuser410@gmail.com"
 
     @changeNames @smoke
     Scenario: change first and last name to new and back to old

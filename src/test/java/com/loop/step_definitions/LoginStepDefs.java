@@ -132,8 +132,10 @@ public class LoginStepDefs {
         loginPage.loginButton.click();
         switch (user_type) {
             case "client":
-                BrowserUtilities.waitForClickable(loginPage.continueButton, DocuportConstants.extraSmall);
+                BrowserUtilities.waitForClickable(loginPage.continueButton, 10);
                 loginPage.continueButton.click();
+
+
         }
     }
 
