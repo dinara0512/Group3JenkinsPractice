@@ -1,6 +1,6 @@
 Feature: advisor checks 1099 form export
 
-  @1099 @smoke
+  @1099 @smoke @ui
   Scenario: advisor exports data and validate approving message
     When user login as "advisor"
     And user adv clicks "1099Form"

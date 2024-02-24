@@ -1,6 +1,6 @@
 Feature: Checking Rows Per Page functionality
 
-  @rows @smoke
+  @rows @smoke @ui
   Scenario: Validate Rows Per Page for different user roles
     Given user login as "advisor"
     When user click on Leads

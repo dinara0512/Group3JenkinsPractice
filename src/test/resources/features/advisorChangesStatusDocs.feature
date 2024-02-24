@@ -1,6 +1,6 @@
 Feature: Advisor changes status docs
 
-  @smoke
+  @smoke @ui
   Scenario: advisor changes status to done of latest docs
     When user login as a "advisor"
     And user adv clicks "receivedDocs" button

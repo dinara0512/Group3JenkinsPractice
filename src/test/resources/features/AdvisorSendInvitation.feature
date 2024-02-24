@@ -1,5 +1,5 @@
 Feature: Email
-  @Email @smoke
+  @Email @smoke @ui
   Scenario: Send email
     Given login as "advisor"
     Then click on Avatar

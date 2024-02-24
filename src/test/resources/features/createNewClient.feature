@@ -1,6 +1,6 @@
 Feature: Create a new client in Docuport
 
-  @newClient @smoke
+  @newClient @smoke @db
   Scenario: create new client with DB
     When user login as "advisor"
     And user clicks Client
@@ -13,7 +13,7 @@ Feature: Create a new client in Docuport
     Then user validates client is created in DB "happyuser410@gmail.com"
     Then user delete created client in DB "happyuser410@gmail.com"
 
-    @changeNames @smoke
+    @changeNames @smoke @db
     Scenario: change first and last name to new and back to old
       When user login as "advisor"
       Then click on Avatar
