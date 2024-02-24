@@ -1,6 +1,6 @@
 Feature: Homepage validation
 
-  @tina @smoke
+  @tina @smoke @ui
   Scenario: Homepage functions validation
     Given user is on the Docuport login page
     Then user validate "Login" text is displayed
