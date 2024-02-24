@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                             "junit:target/junit/junit-report.xml",
                             "rerun:target/rerun.txt",
                             //to generate a report in JSON format
-                           "json:target/cucumber.json",
+                           //"json:target/cucumber.json",
                             "json:target/json-reports/json-report.json",
                             "rerun:target/rerun.txt",
                             "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
