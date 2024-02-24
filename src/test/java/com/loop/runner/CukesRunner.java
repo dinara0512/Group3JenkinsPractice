@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
             (
                     //To generate a report in html format
                     plugin = {"html:target/html - reports/cucumber-report.html",
-                            "json:target/cucumber.json",
                             "html:target/cucumber/report.html",
                             "junit:target/junit/junit-report.xml",
                             "rerun:target/rerun.txt",
