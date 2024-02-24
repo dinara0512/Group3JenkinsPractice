@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                     plugin = {"html:target/html-reports/cucumber-report.html",
                             "json:target/cucumber/cucumber.json",
                             //to generate a report in JSON format
-                           // "json:target/json-reports/json-report.json",
+                           "json:target/json-reports/json-report.json",
                             "rerun:target/rerun.txt",
                             "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                             "junit:target/junit/junit-report.xml",
