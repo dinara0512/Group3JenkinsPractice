@@ -9,17 +9,10 @@ import org.junit.runner.RunWith;
     @CucumberOptions
             (
                     //To generate a report in html format
-                    plugin = {"html:target/html-reports/cucumber-report.html",
-                            "json:target/cucumber.json",
-                            //to generate a report in JSON format
-                           "json:target/json-reports/json-report.json",
-                            "rerun:target/rerun.txt",
-                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                    plugin = {"json:target/cucumber.json",
+                            "html:target/cucumber/report.html",
                             "junit:target/junit/junit-report.xml",
-                            //to generate a report in JSON format
-                           //"json:target/cucumber.json",
-                            //"json:target/json-reports/json-report.json",
-                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+                            "rerun:target/rerun.txt",},
                     //This is for the failed test report
                     //Path to feature file
                     features = "src/test/resources/features/",
