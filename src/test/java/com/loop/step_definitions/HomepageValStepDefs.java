@@ -10,8 +10,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.SoftAssertions;
-
+import org.assertj.core.api.SoftAssertions;
 import java.util.Map;
+import org.assertj.core.api.SoftAssertions;
 
 import static org.junit.Assert.assertEquals;
 
